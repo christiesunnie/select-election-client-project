@@ -1,0 +1,584 @@
+/* General snippets */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 125%;
+}
+
+body {
+    font-family: "Emblema One", cursive;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #1d81cc;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    padding: 20px 0;
+    font-family: "Barlow", sans-serif;
+    font-size: 1rem;
+    line-height: 29px;
+    letter-spacing: 0.2px;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* A11y style for screen reader */
+.visuallyHidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(00 0 0);
+    overflow: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    background: #fcdde2
+        url("https://psd.hackeryou.com/assignment1-assets/electric-select/header-alt.png")
+        bottom right no-repeat scroll;
+    background-size: 100% 100%;
+}
+
+/* Header title */
+header h1 {
+    max-width: 20px;
+    margin: 100px 0 0 0;
+    font-size: 5.2rem;
+    line-height: 87.3px;
+}
+
+header p {
+    font-size: 1.8rem;
+    color: #042259;
+    line-height: 37.9px;
+    letter-spacing: 0.3px;
+}
+
+.wrapper {
+    width: 85%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Hide hamburger menu */
+.hamburger {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: transparent;
+    border: 1px solid transparent;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+
+/* Header nav */
+.home__nav {
+    padding: 20px 0;
+}
+
+.home__nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home__nav a {
+    margin-left: 30px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    font-family: "Catamaran", sans-serif;
+    font-size: 0.9rem;
+    line-height: 29px;
+    color: #042259;
+}
+
+.home__nav a:hover {
+    border: 1px solid #042259;
+}
+
+/* Header icons */
+.icons__wrapper {
+    position: relative;
+    top: -320px;
+    right: -7%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-end;
+}
+
+.icons__wrapper a {
+    align-self: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #1d81cc;
+    cursor: pointer;
+}
+
+.icons__wrapper a:hover {
+    color: #042259;
+}
+
+.icons__wrapper a {
+    border: none;
+}
+
+/* About section */
+.about {
+    background-color: #fde9e9;
+}
+
+.about__wrapper {
+    padding: 60px 0;
+}
+
+.about__title1 {
+    text-align: center;
+}
+
+.images__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    padding: 60px 0;
+}
+
+.text__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+}
+
+/* Blog section */
+.blog {
+    background: #f0f5ff;
+}
+
+.blog__wrapper {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.text__blog1,
+.text__blog2 {
+    width: 41vw;
+    align-self: center;
+}
+
+.text__blog1 {
+    justify-self: right;
+    padding-right: 50px;
+}
+
+.text__blog2 {
+    justify-self: left;
+    padding-left: 50px;
+}
+
+/* Events section */
+.events {
+    background-color: #fde9e9;
+}
+
+.events__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.events i {
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Button style */
+.btn {
+    padding: 7px 10px;
+    background: #f5c8cf;
+    border: 1px solid transparent;
+    color: #042259;
+    font-family: "Emblema One", cursive;
+    font-size: 1rem;
+    line-height: 29px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.read__more {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.text .read__more {
+    background: #042259;
+    color: #fff;
+}
+
+/* Footer */
+
+/* Footer form */
+form {
+    font-size: 0;
+}
+
+input {
+    width: 60%;
+    padding: 4px 20px 8px;
+    border: 2px solid #f5c8cf;
+    font-family: "Barlow", sans-serif;
+    font-size: 1rem;
+    line-height: 29px;
+}
+
+/* Footer contact */
+.contact {
+    background: #f0f5ff;
+}
+
+.contact__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.contact__form {
+    width: 50vw;
+}
+
+.contact__form p {
+    padding: 10px 0;
+}
+
+/* Footer nav */
+.footerNav {
+    display: flex;
+    flex: 1 auto;
+    justify-content: space-between;
+}
+
+.contact__address a {
+    font-family: "Barlow", sans-serif;
+    text-transform: lowercase;
+    color: #000;
+}
+
+.address {
+    padding-top: 15px;
+    font-family: "Barlow", sans-serif;
+}
+
+.contact__nav li {
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+.contact__nav a {
+    color: #1d81cc;
+    font-weight: 700;
+}
+
+.subscribe:hover {
+    border: 1px solid transparent;
+}
+
+/* Footer copyright */
+.copyright {
+    background: #042259;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 1045px) {
+    /* Header title */
+    header h1 {
+        font-size: 4rem;
+        line-height: 70px;
+    }
+
+    header p,
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Modify the blog section */
+    .blog__wrapper {
+        max-width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .text__blog1,
+    .text__blog2 {
+        width: 85vw;
+        padding: 50px 0;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .image__blog1 {
+        order: -1;
+    }
+
+    .blog p {
+        text-align: left;
+    }
+
+    .icons__wrapper {
+        top: -285px;
+    }
+
+    /* Footer address */
+    .address span {
+        display: block;
+    }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    /* Hide the header icons */
+    .icons__wrapper {
+        visibility: hidden;
+    }
+
+    /* Modify the about section */
+    .images__container img:last-child {
+        display: none;
+    }
+
+    .images__container {
+        grid-template-columns: 1fr 1fr;
+        padding: 40px 0;
+    }
+
+    .text__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        text-align: center;
+    }
+
+    .text p {
+        text-align: left;
+    }
+
+    /* Footer contact */
+    .contact__form {
+        width: 45vw;
+    }
+
+    .footerNav {
+        margin-left: 15px;
+    }
+
+    .address li,
+    .contact__nav a,
+    .contact p {
+        font-size: 0.9rem;
+    }
+
+    .contact__nav li {
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 830px) {
+    header {
+        height: 100vh;
+        background: #fcdde2
+            url("https://psd.hackeryou.com/assignment1-assets/electric-select/header-group-appliances.png")
+            bottom right no-repeat scroll;
+        background-size: 65% 80%;
+    }
+    /* Header title */
+    header h1 {
+        font-size: 3.5rem;
+        line-height: 55px;
+    }
+
+    header p {
+        padding-top: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* Footer contact */
+    input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subscribe {
+        margin: 15px auto;
+        padding: 7px 20px;
+    }
+
+    h4,
+    .contact__nav a {
+        font-size: 1.2rem;
+    }
+
+    .address span {
+        display: block;
+    }
+
+    .contact__wrapper {
+        flex-flow: column wrap;
+        gap: 30px;
+    }
+
+    .contact__form {
+        width: 80vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact__form p {
+        padding: 15px 0;
+    }
+
+    .contact__nav li {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 100vh;
+        background: #fcdde2
+            url("https://psd.hackeryou.com/assignment1-assets/electric-select/header-group-appliances.png")
+            bottom right no-repeat scroll;
+        background-size: 60% 65%;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        line-height: 55px;
+    }
+    /* Show hamburger menu */
+    .hamburger {
+        visibility: visible;
+    }
+
+    .hamburger i {
+        font-size: 2rem;
+    }
+    /* Hide home nav */
+    .home__nav li {
+        visibility: hidden;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    header {
+        height: 100vh;
+        background: #fcdde2
+            url("https://psd.hackeryou.com/assignment1-assets/electric-select/header-alt-mobile.png")
+            bottom right no-repeat scroll;
+        background-size: 100% 100%;
+    }
+    /* Header title */
+    header h1 {
+        font-size: 2.5rem;
+        line-height: 45px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h4,
+    header p {
+        padding-top: 0;
+        font-size: 1rem;
+    }
+
+    /* Modify the event section */
+    .events__wrapper {
+        flex-flow: column wrap;
+    }
+
+    .events__wrapper div:nth-child(2) {
+        padding: 30px 0;
+    }
+
+    /* Footer nav */
+    .contact__nav a {
+        font-size: 0.9rem;
+    }
+
+    .address li,
+    .contact p,
+    .text p,
+    .blog p {
+        font-size: 0.8rem;
+    }
+}
